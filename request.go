@@ -76,7 +76,7 @@ func (req Request) String() string {
     return fmt.Sprintf("Method: %s, Url: %s, Protocal: %s, Headers: %v, Body: %v", req.Method, req.Url, req.Protocol, req.Headers, req.Body)
 }
 
-func (req Request) Do() *Response {
+func (req Request) Parse() *Response {
     switch req.Method {
     case GET:
         // read current dir file by url, and return
